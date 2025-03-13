@@ -1,0 +1,8 @@
+fun subtractionTest(): Int {
+    var num: Int = 43 - 1;
+    return get num;
+}
+
+fun main(): Int {
+    return get subtractionTest();
+}

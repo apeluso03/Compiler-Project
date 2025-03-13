@@ -1,0 +1,11 @@
+fun testEquality (): Bool {
+    var flag: Bool = FALSE;
+    if(TRUE == FALSE) {
+        put flag = TRUE;
+    }
+    return get flag;
+}
+
+fun main(): Bool {
+    return get testEquality();
+}

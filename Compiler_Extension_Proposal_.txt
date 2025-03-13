@@ -1,0 +1,243 @@
+﻿Shay Patel, Alex Peluso, Arjun Manikyath
+4/8/24
+Compiler Extension Proposal 
+
+
+
+
+2 Major Extensions
+
+
+Division Functionality
+
+
+1) A justification of the extension. Who would benefit from the feature? Why should it be added?
+
+
+The extension is justified because the user would be able to perform mathematical functions as necessary. Users that need any basic math would benefit. It should be added because it is a fundamental function. 
+
+
+2) A description of the extension from the view point of a compiler user. How will it work? What will the syntax look like (code examples)? For minor extensions this may be brief; major extensions will require more text. 
+
+
+From the viewpoint of a compiler user, it will work by adding the syntax itself of the division symbol, as well as addition functionality similar to how addition and subtraction work. The syntax would simply look like ‘/’ with numbers before and after the operator itself. In terms of code, an example would be as follows. 
+
+
+—-
+Var number  = 4 / 6; 
+Print(4/6);
+—-
+
+
+The tokenization of terms will not be particular about spaces, as it will only search for numbers around the division operator. It will simply be the slash itself. In terms of the compiler, it will perform the action behind the scenes, however in terms of syntax, it will be the typical operator seen in most languages. 
+
+
+
+
+3) A description of the impacts of the extension on the compiler. What parts of the pipeline will be impacted? How significant will the impacts be? How will it interact with the other extensions you are proposing?
+
+
+The compiler would be impacted on the basis of fundamental use cases. The pipeline itself wouldn’t be impacted much, the parts impacted would be the same as the other mathematical functions, grouped with addition, subtraction, and multiplication. It will interact with the other extensions being proposed independently, as it is considered part of the mathematical functions but does not require any dependence on any other compiler function. The impacts are significant and yet independent. 
+
+
+4) A description of how you will judge the success of the extension.
+
+
+We will judge the success of the extension if any number storable in an integer (as floats aren’t added) are being divided. For example, if every number is accurately divisible, the extension is a success. 
+
+
+
+
+Add Char Type
+
+
+1) A justification of the extension. Who would benefit from the feature? Why should it be added?
+
+
+This is justified because we are adding what can be considered primitive strings. Users would be able to benefit as it changes the entire functionality of the language from bools and numbers into being able to use words, strings, and sentences. It should be added because it would turn the language into a usable language for more than simply math and logic. 
+
+
+2) A description of the extension from the view point of a compiler user. How will it work? What will the syntax look like (code examples)? For minor extensions this may be brief; major extensions will require more text. 
+
+
+The char type from the compiler’s view would be a grouped together version of characters similar to a string. This would be grouped within either single quotes ‘’ or double quotes “”. Anything within these two would be considered a string and the text inside does not need to be concatenated. The syntax looks as follows: 
+
+
+—-
+Var sentence  = ‘the dog ran outside’; 
+Var sentence2  = “thedogranoutside”; 
+
+
+Print(“the dog ran outside”);
+Print(‘the dog ran outside’);
+—-
+
+
+In terms of lexing, parsing, and syntactical analysis, anything that is grouped within the quotes will be considered belonging to a char. It is very important to note that all chars will be grouped given a fixed amount of memory space which has not been determined yet. They will all be considered the same fixed amount, and will likely start by being a relatively small space. These can be used as simple strings, but will likely not have the byte space to carry massive paragraphs or such. As long as they are grouped within the same segment, any character inside will be considered part of the same char. 
+
+
+
+
+
+
+3) A description of the impacts of the extension on the compiler. What parts of the pipeline will be impacted? How significant will the impacts be? How will it interact with the other extensions you are proposing?
+
+
+The compiler will be impacted as certain fundamentals will be changed, as now tokenization will be much more important. In terms of pipeline, the beginning of the pipeline with variable syntax and more will be impacted, as well as the end of the pipeline where the significant impact is that the new tokenized chars would be interpreted with having any string of characters. It will interact with the variable declarations and syntax of the compiler pipeline, as well as during the tokenization aspect.
+
+
+4) A description of how you will judge the success of the extension.
+
+
+The success of the extension will be determined if chars are successfully determined as char types once properly declared. As long as they are properly type checked amongst different test cases. 
+
+
+
+
+
+
+3 Minor Extensions
+
+
+Comments
+
+
+1) A justification of the extension. Who would benefit from the feature? Why should it be added?
+
+
+Helps with code readability. Every user typing the code to be interpreted by the compiler would benefit. This should be added because it enhances development of the code itself. 
+
+
+2) A description of the extension from the view point of a compiler user. How will it work? What will the syntax look like (code examples)? For minor extensions this may be brief; major extensions will require more text. 
+
+
+From a compiler user, this would work by identifying the symbol indicating a comment, in this case being “//”. Once identifying the symbol, all text on the proceeding line will be negated, and essentially ignored. This will work similarly to the char symbol and may use the same system. It will work by putting a ‘//’ and then writing comments after. The syntax looks as follows. 
+
+
+—-
+// add comments here
+
+
+//anything added after the slashes will be ignored on this line. 
+—-
+It is very important to note that this syntax and extension (for now) will only be one line comments. In addition, it will work by adding the syntax into the language, and once the symbols are parsed, everything on the line will simply be ignored text. There must be a system to implement this ignoring only on the given line, and not entirely after the slashes. 
+
+
+3) A description of the impacts of the extension on the compiler. What parts of the pipeline will be impacted? How significant will the impacts be? How will it interact with the other extensions you are proposing?
+
+
+The impact is quite simple, as only simple syntax would be added to the language to disregard any language after the comment symbol . The only part of the pipeline impacted is language declaration. The impact is quite insignificant, and doesn’t interact with other extensions. 
+
+
+4) A description of how you will judge the success of the extension.
+
+
+The success of the extension is dependent if the text after the comment symbol determined is disregarded. Tests will be written to make sure comment code is simply disregarded. 
+
+
+Modulo Operator
+
+
+1) Justification of the Extension
+The extension will be helpful by providing a native modulo operation, which is a fundamental arithmetic operation used in many algorithms and calculations. Those that would benefit include anyone performing arithmetic operations, especially in areas such as cryptography, computer graphics, and any field involving periodic functions or cyclic behavior. Adding this feature will enhance the language's utility and make mathematical expressions more intuitive and concise.
+
+
+2) Description of the Extension from the Viewpoint of a Compiler User
+From the compiler user's perspective, the modulo operation will be integrated seamlessly into the language. The syntax will be straightforward, similar to other arithmetic operations like addition and multiplication. Here’s what the syntax might look like:
+
+
+Var a: Int = 10 % 3; // a is 1
+Var b: Int = 25 % 7; // b is 4
+
+
+In this example, the modulo operator % will be used to find the remainder of the division of two numbers. The compiler will tokenize the % symbol during lexing and parse it as a binary operator in the parsing stage.
+
+
+3) Description of the Impacts on the Compiler
+The addition of the modulo operation will impact the following parts of the compiler pipeline:
+
+
+Lexical Analysis: The lexer needs to recognize % as a valid token for the modulo operation.
+Parsing: The parser must include rules to handle the modulo operation, ensuring it correctly parses expressions involving %.
+Semantic Analysis: The semantic analyzer must verify that the operands of the modulo operation are of compatible types (e.g., integers or compatible numeric types).
+Code Generation: The code generator must produce appropriate machine code or intermediate code to perform the modulo operation on the target architecture.
+The impacts are significant but manageable, as they primarily involve extending existing arithmetic operation handling mechanisms. This extension should not interfere with other compiler extensions, assuming no conflicting modifications to arithmetic expression handling.
+
+
+4) Judging the Success of the Extension
+Success will be judged based on the following criteria:
+
+
+Correctness: Test cases involving modulo operations should produce the correct results for a variety of input values, including positive, negative, and zero operands.
+Compatibility: The extension should work seamlessly with existing features of the language and should not cause any regressions in other parts of the compiler.
+Usability: The syntax and behavior of the modulo operation should be intuitive and consistent with user expectations.
+
+
+Truthiness
+
+
+1) A justification of the extension. Who would benefit from the feature? Why should it be added?
+
+
+The justification is that the equivalence of true/false to 1/0 would be beneficial in the cohesion of the language itself. If these boolean expressions had numerical values, anyone using booleans would benefit. It should be added to enhance the fundamental logic of the language and compiler. 
+
+
+
+
+2) A description of the extension from the view point of a compiler user. How will it work? What will the syntax look like (code examples)? For minor extensions this may be brief; major extensions will require more text. 
+
+
+The extension will widely be 2 things- defining 1 and 0 and associating them with true/false, as well as being able to use the numerical value with expressions. This will start with language declaration, as it must be explicitly stated that true is 1 and false is 0. In addition, when lexed and parsed, it will be important to change backend code to associate the actions that have to do with true/false operations with the according values 1 and 0. 
+
+
+—-
+emptyList ([]) = false
+emptyNumber () = false
+emptyVarOfAnyType () = false
+// false has numerical equivalence of 0. 
+—-
+
+
+Not all truthiness will be included. Generally speaking, because anything with any value has some level of truthiness, any value associated with false will be 0, and anything with 1 will be true given basic parameters. This will be more finely flushed out in grammatical definitions when written in. 
+
+
+3) A description of the impacts of the extension on the compiler. What parts of the pipeline will be impacted? How significant will the impacts be? How will it interact with the other extensions you are proposing?
+
+
+The compiler is impacted only in the sense of the language definitions and lexing. The language must be defined to have numerical values alongside association of booleans. The impacts are insignificant. It will only interact with the extensions that involve boolean logic, which is only conditionals and variable declarations. 
+
+
+4) A description of how you will judge the success of the extension.
+
+
+We will judge the success of the extension if boolean expressions and problems are evaluated and equated to numbers. This will require extensive testing. 
+
+
+
+
+
+
+Timeline for Extensions
+
+
+
+
+4 Week Timeline 
+
+
+1. Week 1 
+   1. Start implementation of comments
+   2. Start implementation of truthiness
+   3. Start implementation of chars (simple strings)
+2. Week 2 
+   1. Finish implementation of single line comments
+   2. Start implementation of division
+   3. Start truthiness implementation
+3. Week 3 
+   1. Start extensive testing of each extension function (not including testing during development)
+   2. Finish implementation of chars (simple strings)
+   3. Finish truthiness implementation
+4. Week 4
+   1. Finish division implementation
+   2. Finalize overall implementation
+   3. Gather and review all documentation, make necessary changes

@@ -1,0 +1,8 @@
+fun moduloTest(): Int {
+    var num: Int = 42 % 1;
+    return get num;
+}
+
+fun main(): Int {
+    return get moduloTest();
+}

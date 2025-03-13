@@ -1,0 +1,11 @@
+fun whileTest(): Int {
+    var num: Int = 0;
+    while (get num < 42) {
+        put num = 42;
+    }
+    return get num;
+}
+
+fun main(): Int {
+    return get whileTest();
+}

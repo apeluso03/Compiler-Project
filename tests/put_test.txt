@@ -1,0 +1,9 @@
+fun putTest(): Int{
+    var num: Int = 0;
+    put num = 42;
+    return get num;
+}
+
+fun main(): Int {
+    return get putTest();
+}

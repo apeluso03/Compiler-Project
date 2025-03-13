@@ -1,0 +1,8 @@
+fun declareTest(): Int {
+    var num: Int = 42;
+    return get num;
+}
+
+fun main(): Int {
+    return get declareTest();
+}

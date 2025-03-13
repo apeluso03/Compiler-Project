@@ -1,0 +1,11 @@
+fun conjunctionTest(): Bool{
+    var b: Bool = TRUE;
+    if(TRUE and TRUE) {
+        put b = FALSE;
+    }
+    return get b;
+}
+
+fun main(): Bool {
+    return get conjunctionTest();
+}

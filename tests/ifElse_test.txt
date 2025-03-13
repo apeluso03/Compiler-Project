@@ -1,0 +1,14 @@
+fun ifElseTest(): Int {
+    var num: Int = 0;
+    if (TRUE and FALSE) {
+        put num = 99;
+    }
+    else {
+        put num = 42;
+    }
+    return get num;
+}
+
+fun main(): Int {
+    return get ifElseTest();
+}

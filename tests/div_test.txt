@@ -1,0 +1,8 @@
+fun divTest(): Int {
+    var num: Int = 420 / 10;
+    return get num;
+}
+
+fun main(): Int {
+    return get divTest();
+}

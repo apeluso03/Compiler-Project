@@ -1,0 +1,7 @@
+fun argumentTest(num: Int): Int {
+    return get num;
+}
+
+fun main(): Int {
+    return get argumentTest(42);
+}

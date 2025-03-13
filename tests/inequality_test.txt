@@ -1,0 +1,11 @@
+fun inequalityTest(): Int {
+    var num: Int = 0;
+    if (TRUE != FALSE) {
+        put num = 42;
+    }
+    return get num;
+}
+
+fun main(): Int {
+    return get inequalityTest();
+}

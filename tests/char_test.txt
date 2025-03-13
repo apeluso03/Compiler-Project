@@ -1,0 +1,8 @@
+fun charTest(): Char {
+    var letter: Char = 'Hello World 1234';
+    return get letter;
+}
+
+fun main(): Char {
+    return get charTest();
+}

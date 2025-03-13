@@ -1,0 +1,13 @@
+/*comment coment */
+
+fun addTest(): Int {
+    /* test 1234
+    trying to make multi line comments */
+    var num: Int = 41 + 1;
+    return get num;
+}
+
+fun main(): Int {
+    /* test 1234 */
+    return get addTest();
+}

@@ -1,0 +1,9 @@
+fun test_pass_unary(): Int {
+    var i: Int = -1;
+    var b: Bool = !FALSE;
+    return get i;
+}
+
+fun main(): Int {
+    return get test_pass_unary();
+}

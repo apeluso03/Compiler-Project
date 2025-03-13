@@ -1,0 +1,11 @@
+fun disjunctionTest(): Bool{
+    var b: Bool = FALSE;
+    if(TRUE or FALSE) {
+        put b = TRUE;
+    }
+    return get b;
+}
+
+fun main(): Bool {
+    return get disjunctionTest();
+}

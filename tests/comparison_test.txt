@@ -1,0 +1,21 @@
+fun comparisonTest(): Int {
+    var i: Int = 0;
+    if(2 > 1) {
+        put i = 41;
+    }
+    if(2 >= 1) {
+        put i = 42;
+    }
+    if(2 < 1) {
+        put i = 43;
+    }
+    if(2 <= 1) {
+        put i = 44;
+    }
+    return get i;
+}
+
+fun main(): Int {
+    return get comparisonTest();
+}
+

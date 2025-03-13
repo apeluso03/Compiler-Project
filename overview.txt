@@ -1,0 +1,100 @@
+WASM Code Generation Implementation
+
+Alexander Peluso apeluso@udel.edu
+Shay Patel patelsap@udel.edu
+Arjun Manikyath arjunman@udel.edu
+
+
+Summary:
+Which parts of the assignment were the most challenging.
+The most challenging part of the assignment was being able to integrate with Ohm. There is a huge amount of difficulty here.
+
+Interesting design decisions that you made.
+Ohm as a whole. It seems as though it works well on its own, but not with integrating into other libraries. 
+
+Major issues that you ran into while designing, implementing, or testing your program.
+Some major issues that we ran into while desigining,implementing, and testing our program was difficulty
+integrating the changes in Ohm. Ohm was very difficult to design and implement with our program. We had to take extra
+time to revamp the project to get it fully functional.
+
+Known problems with your implementation, such as missing functionality or bugs.
+No known problems
+
+
+Modifications:
+We have made no modifications to the assignment besides the fact that we recreated 
+the repo so all of our old branches and issues that were closed are linked in this overview,
+however all the changes here were done in one go on main.
+
+Design & Implementation:
+Main https://gitlab.eecis.udel.edu/apeluso/ohm-compiler-revamped/-/tree/main?ref_type=heads
+
+gitlab issues from the old compiler:
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/issues/5 - Create submission doc
+This is completing the task of this document, and essentially preparing a deliverable
+
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/issues/4 - Write test cases
+This is for writing tests after completing the intended function
+
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/issues/3 - Implement Code Generation
+This is for writing the main task of the assignment
+
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/issues/1 - Update readme
+This is to update documentation of what will be used to represent  project development
+
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/issues/2 - Develop with good practices
+This is to develop with branches, issues, and more.
+
+
+
+Branches:
+Please note: Many branches were closed or deleted after being merged into main. 
+For this reason not all branches are listed. In addition, only relevant branches to this phase of the 
+project were added. Other branches may exist but pertain to previous parts of the project, including previous repos.
+
+https://gitlab.eecis.udel.edu/apeluso/ohm-compiler-revamped/-/tree/main?ref_type=heads
+This is main. Everything was committed and merged here. 
+
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/tree/reworkedSubmissionDoc?ref_type=heads 
+This is reworked submission doc. Submission & deliverables were merged here.
+
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/tree/codeGenImplementation?ref_type=heads
+This is Code Generation Implementation. The attempts to implement generation were pushed here.
+
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/tree/implementationTesting?ref_type=heads
+This is implementation testing. This is where test cases would be written and pushed. 
+
+https://gitlab.eecis.udel.edu/apeluso/wasm-code-generation/-/tree/reworkedReadme?ref_type=heads
+This is reworked readme. This is where the readme would be reworked for this project phase.
+
+
+
+Testing:
+We have functional testing for this project. We tested multiple outcomes to make sure
+that all possibilities are thoroughly exhausted.
+
+Known Problems:
+There is no known problems.
+
+Comments:
+How much time did you spend on the assignment?
+11-14 hours total. 
+
+How was it divided between designing, coding, and testing?
+Minimum 10 hours researching and testing how we could integrate binaryen.js with Ohm, designing 2 hours, coding 3 hours. 
+
+What advice should we have given you before you started?
+Understand Ohm's limitations before building the foundation on top of it. 
+
+What was surprising about the assignment?
+It was surprising that integration was spent the most time on, and that to a degree it is still unsuccessful.
+
+What was hard about the assignment?
+Integrating libraries with other libraries
+
+What did you like or dislike about the assignment?
+Liked the freedom of being able to build it into a given direction, dislike the difficulty of building tall but not wide.
+
+What would you change about the assignment?
+Wouldn't change anything, but for sure would've tried integration testing in earlier phases. Lesson learned
+
